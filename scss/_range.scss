@@ -1,0 +1,35 @@
+.bigSlider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 10px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        background: $strong-cyan;
+        border-radius: 50%;
+        cursor: pointer;
+        background-image: url(/images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &:hover {
+            box-shadow: 5px 10px #888888;
+            box-shadow: $strong-cyan 0px 7px 29px 0px;
+        }
+      }
+}
+
