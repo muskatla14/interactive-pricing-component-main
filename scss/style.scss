@@ -18,7 +18,7 @@ body {
     font-family: $font-stack;
     font-weight: weight(bold);
     color: $grayish-blue;
-    background-image: url(/images/bg-pattern.svg)!important;
+    background-image: url('/images/bg-pattern.svg')!important;
     background-repeat: no-repeat; 
     background-size: 100% 50%;
     height: 100vh;
@@ -43,7 +43,7 @@ i {
     &-heading {
         text-align: center;
         padding: 2rem 0;
-        background-image: url(/images/pattern-circles.svg);
+        background-image: url('/images/pattern-circles.svg');
         background-position: center;
         background-repeat: no-repeat;
     }
