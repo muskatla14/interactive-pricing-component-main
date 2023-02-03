@@ -4,29 +4,12 @@
 @import 'switch';
 
 
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name)
-}
-
 
 @mixin flexCenter($direction) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: $direction;
-}
-
-@mixin theme($light-theme: false) {
-    @if $light-theme {
-        background: darken($very-pale-blue, 100%);
-        color: lighten($grayish-blue, 100%);
-    }
-}
-
-@mixin mobile {
- @media (max-width: $mobile) {
-    @content;
- }
 }
 
 
@@ -38,7 +21,6 @@ body {
     background-image: url(/images/bg-pattern.svg)!important;
     background-repeat: no-repeat; 
     background-size: 100% 50%;
-    // background: $very-pale-blue;
     height: 100vh;
     line-height: $line-height;
 }
@@ -55,13 +37,12 @@ i {
 
 .main {
     width: 40%;
+    margin-top: 2rem;
     
-    // margin: 0 auto;
 
     &-heading {
         text-align: center;
         padding: 2rem 0;
-        margin-bottom: 4.2rem;
         background-image: url(/images/pattern-circles.svg);
         background-position: center;
         background-repeat: no-repeat;
@@ -71,11 +52,9 @@ i {
         color: $dark-desaturated-blue;
         font-weight: weight(extraBold);
         padding: 1rem 0;
+        margin-top: 2rem;
     }
 
-    @include mobile{
-        width: 80%;
-    }
 }
 
 
@@ -124,6 +103,7 @@ i {
         gap: 20px;
         justify-self: end;
         align-self: center;
+        align-items: center;
     }
 
     .year-billing {
@@ -134,7 +114,7 @@ i {
         margin-left: 1rem;
     }
 
-    .discount {
+    .discount, .discount-mobile {
         color: $light-red;
         background-color: $light-grayish-red;
         border-radius: 10px;
@@ -157,10 +137,10 @@ i {
         padding: 1rem 2rem;
         border-radius: 2rem;
         cursor: pointer;
+        font-weight: 700;
+        letter-spacing: 2px;   
     }
 }
 
-.light {
-    @include theme($light-theme: false);
-}
 
+@import 'responsive';

@@ -16,12 +16,11 @@ $grayish-blue: hsl(225, 20%, 60%); // (Text)
 $dark-desaturated-blue: hsl(227, 35%, 25%); // (Text & CTA Background)
 
 $font-stack: 'Manrope', sans-serif;
-$font-weights: (
-    "semiBold": 600,
-    "extraBold": 800
-);
 $line-height: 1.7;
-
 $columns: 2;
 
-$mobile: 800px;
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
